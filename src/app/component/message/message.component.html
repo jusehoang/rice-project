@@ -1,0 +1,19 @@
+<div class="container">
+  <ng-container [ngSwitch]="type">
+    <div *ngSwitchCase="'success'" class="icon">
+      <mat-icon class="success">check_circle_outline</mat-icon>
+    </div>
+    <div *ngSwitchCase="'error'" class="icon">
+      <mat-icon class="error">cancel</mat-icon>
+    </div>
+    <div *ngSwitchCase="'info'" class="icon">
+      <mat-icon class="info">check_circle_outline</mat-icon>
+    </div>
+    <div *ngSwitchCase="'warning'" class="icon">
+      <mat-icon class="warning">warning</mat-icon>
+    </div>
+  </ng-container>
+  <div class="content">
+    {{ content }}
+  </div>
+</div>

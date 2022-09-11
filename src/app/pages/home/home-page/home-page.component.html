@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="banner">
+    <img src="https://comngon16.com/upload/slideshow/1547698671banner2.jpg" alt="">
+  </div>
+  <div class="content">
+    <div class="branch-container">
+      <h1>Cơm Văn Phòng</h1>
+      <div class="branch">
+        <ng-container *ngFor="let branch of branchs">
+          <div class="one-branch">
+            <p class="branch-name">{{branch.name}}</p>
+            <p class="branch-address">Địa chỉ: {{ branch.address}}</p>
+            <p class="branch-phone" color="warn">HOTLINE: {{ branch.phone | phone }}</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="rice-container">
+      <hr>
+      <h2>Giao Cơm Văn Phòng</h2>
+      <p>Hãy chọn xuất cơm ưa thích của bạn , Juse Hoàng Ship đến tận nơi - giao cơm đúng giờ!</p>
+      <p>Chúng tôi nhận ship cơm văn phòng nội thành Hà Nội các quận: Cầu Giấy, Đống Đa, Hoàn Kiếm, Từ Liêm, Hai Bà
+        Trưng, Thanh Xuân, Hà Đông...</p>
+      <div class="rice">
+        <ng-container *ngFor="let rice of rices">
+          <mat-card class="one-rice">
+            <img mat-card-image [src]="rice.image" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p class="rice-name">{{ rice.name }}</p>
+              <p class="rice-name">Giá: <b style="color:#f44336">{{ rice.cost | number }} VNĐ</b></p>
+              <button mat-flat-button color="primary"><span style="font-size: 18px; padding: 8px">Thêm vào giỏ hàng</span>
+                <mat-icon style="font-size: 20px">shopping_cart</mat-icon>
+              </button>
+            </mat-card-content>
+          </mat-card>
+        </ng-container>
+      </div>
+    </div>
+    <hr>
+    <div class="hot-pot-container">
+      <h1>Các món lẩu</h1>
+      <p>Nhanh chóng - Tiện lợi - Không lo chờ đợi</p>
+      <div class="hot-pot">
+        <ng-container *ngFor="let rice of rices">
+          <mat-card class="one-hot-pot">
+            <img mat-card-image [src]="rice.image" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p class="hot-pot-name">{{ rice.name }}</p>
+              <p class="hot-pot-name">Giá: <b style="color:#f44336">{{ rice.cost | number }} VNĐ</b></p>
+              <button mat-flat-button color="primary"><span style="font-size: 18px; padding: 8px">Thêm vào giỏ hàng</span>
+                <mat-icon style="font-size: 20px">shopping_cart</mat-icon>
+              </button>
+            </mat-card-content>
+          </mat-card>
+        </ng-container>
+      </div>
+    </div>
+    <hr>
+    <div class="drink-container">
+      <h1>Đồ uống</h1>
+      <div class="drink">
+        <ng-container *ngFor="let rice of rices">
+          <mat-card class="one-drink">
+            <img mat-card-image [src]="rice.image" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p class="drink-name">{{ rice.name }}</p>
+              <p class="drink-name">Giá: <b style="color:#f44336">{{ rice.cost | number }} VNĐ</b></p>
+              <button mat-flat-button color="primary"><span style="font-size: 18px; padding: 8px">Thêm vào giỏ hàng</span>
+                <mat-icon style="font-size: 20px">shopping_cart</mat-icon>
+              </button>
+            </mat-card-content>
+          </mat-card>
+        </ng-container>
+      </div>
+    </div>
+    <div class="menu-container">
+      <app-menu-day></app-menu-day>
+    </div>
+  </div>
+</div>

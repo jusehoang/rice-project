@@ -1,0 +1,163 @@
+.container {
+  width: 100%;
+  margin: 0;
+
+  .banner {
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    width: 70%;
+    margin: auto;
+
+    .branch-container {
+
+      h1 {
+        margin: auto;
+        border-bottom: 2px solid #333;
+        max-width: 300px;
+        padding-bottom: 10px;
+        text-align: center;
+        padding-top: 10px;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 2em;
+      }
+
+      .branch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+        align-content: center;
+        padding: 20px 0px;
+
+        .one-branch {
+          width: 33%;
+          text-align: center;
+          border-radius: 2px;
+          background-color: #f1f1f1;
+
+          .branch-name {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            font-size: 26px;
+            background-color: #ff6702;
+            padding: 10px 0;
+          }
+
+          .branch-address {
+            font-size: 15px;
+            padding: 10px 0;
+            font-weight: 400;
+          }
+
+          .branch-phone {
+            font-size: 27px;
+            color: #f44336
+          }
+        }
+      }
+    }
+
+    .rice-container {
+      text-align: center;
+      width: 100%;
+
+      .rice {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+        align-content: center;
+
+        .one-rice {
+          width: 30%;
+          cursor: pointer;
+          margin-bottom: 15px;;
+
+          .rice-name {
+            font-weight: 800;
+            font-size: 20px;
+            padding: 5px 0;
+          }
+        }
+
+        .one-rice:hover {
+          box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+        }
+      }
+    }
+
+    .hot-pot-container {
+      text-align: center;
+      width: 100%;
+
+      h1 {
+        font-weight: 800;
+        font-size: 30px;
+      }
+
+      .hot-pot {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+        align-content: center;
+
+        .one-hot-pot {
+          width: 30%;
+          cursor: pointer;
+          margin-bottom: 15px;;
+
+          .hot-pot-name {
+            font-weight: 800;
+            font-size: 20px;
+            padding: 5px 0;
+          }
+        }
+
+        .one-hot-pot:hover {
+          box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+        }
+      }
+    }
+
+    .drink-container {
+      text-align: center;
+      width: 100%;
+
+      h1 {
+        font-weight: 800;
+        font-size: 30px;
+      }
+
+      .drink {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+        align-content: center;
+
+        .one-drink {
+          width: 30%;
+          cursor: pointer;
+          margin-bottom: 15px;
+
+          .drink-name {
+            font-weight: 800;
+            font-size: 20px;
+            padding: 5px 0;
+          }
+        }
+
+        .one-drink:hover {
+          box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+        }
+      }
+    }
+  }
+}

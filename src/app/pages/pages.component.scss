@@ -1,0 +1,15 @@
+.container {
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
+  .content {
+    height: calc(100vh - 55px);
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<div class="container">
+  <mat-card class="card-container">
+    <h1>Register</h1>
+    <div class="register">
+      <a [routerLink]="['auth', 'login']" routerLinkActive="active">Do have an account? Login now.</a>
+    </div>
+    <form [formGroup]="form">
+      <div>
+        <mat-form-field appearance="fill" class="form-item">
+          <mat-label>Họ và tên</mat-label>
+          <input matInput placeholder="Nhập họ và tên" formControlName="fullname">
+          <mat-error *ngIf="form.get('fullname')?.invalid">{{getErrorFullnameMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="form-item">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Nhập email" formControlName="email">
+          <mat-error *ngIf="form.get('email')?.invalid">{{getErrorEmailMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="form-item">
+          <mat-label>Số điện thoại</mat-label>
+          <input matInput placeholder="phone" formControlName="phone">
+          <mat-error *ngIf="form.get('phone')?.invalid">{{getErrorPhoneMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="form-item">
+          <mat-label>Tài khoản</mat-label>
+          <input matInput placeholder="Enter username" formControlName="username">
+          <mat-error *ngIf="form.get('username')?.invalid">{{getErrorUsernameMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="form-item">
+          <mat-label>Mật khẩu</mat-label>
+          <input matInput placeholder="Enter password" formControlName="password" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="form.get('password')?.invalid">{{getErrorPasswordMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="form-item">
+          <mat-label>Xác nhận mật khẩu</mat-label>
+          <input matInput placeholder="Enter password" formControlName="confirmPassword" [type]="hideconfirmPassword ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hideconfirmPassword = !hideconfirmPassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideconfirmPassword">
+            <mat-icon>{{hideconfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="form.get('confirmPassword')?.invalid">{{getErrorConfirmPasswordMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <!-- <a class="forgot-password" [routerLink]="['auth', 'forgot-password']" routerLinkActive="active">Forgot Password?</a> -->
+      <button mat-flat-button class="form-item" color="primary" (click)="register()">Register</button>
+    </form>
+  </mat-card>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="menu-container">
+  <h1>Thực đơn hàng ngày</h1>
+  <p>Chúng tôi mở cửa đón khách liên tục từ 10h-22h, có điều hòa mát lạnh.</p>
+  <div class="container">
+    <ng-container *ngFor="let food of foods">
+      <div class="one-container">
+        <div class="title">{{ food.day }}</div>
+        <ul>
+          <li *ngFor="let name of food.list">{{ name }}</li>
+        </ul>
+      </div>
+    </ng-container>
+  </div>
+  <h3>Các món phụ thay đổi theo ngày</h3>
+  <p>Lòng già xào dưa chua, đậu sốt cà chua, chuối đậu om mẻ, trứng cút sốt cà chua, đậu sốt xì dầu, đậu sốt cay, nem
+    rán, trứng đúc thịt, trứng ốp la, mề gà xào cần tỏi, cà tím om đậu mẻ, mướp đắng nhồi thịt, măng nhồi thịt, thịt nạc
+    xào súp lơ, gan xào cần tỏi, lòng trần hành giá, ngô xào bơ thịt băm, giò lụa, lạc rang muối, chả cá sốt cà chua,
+    măng xào thịt, mề gà xào đậu đỗ, nhộng rang lá chanh</p>
+</div>

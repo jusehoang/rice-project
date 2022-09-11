@@ -1,0 +1,68 @@
+.mat-card {
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+
+  .logo {
+    width: 25%;
+    text-align: center;
+
+    img {
+      width: 30%;
+      height: 100%;
+    }
+  }
+
+  .tab {
+    width: 50%;
+  }
+
+  .tab-login {
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+
+    li > a {
+      padding: 16px 23px;
+      text-transform: uppercase;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    li > a:active {
+      color: #9c27b0;
+    }
+
+    li:hover {
+      background-color: rgba(221, 221, 221, 0.5);
+      cursor: pointer;
+    }
+  }
+
+  .user {
+    width: 25%;
+    display: flex;
+    align-items: center;
+
+    .user-button {
+      font-weight: 800;
+      color: #9c27b0;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+.active {
+  // background-color: rgb(221, 221, 221);
+  border-bottom: 2px solid #9c27b0;
+}

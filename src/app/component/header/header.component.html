@@ -1,0 +1,52 @@
+<mat-card>
+  <div class="header-container">
+    <div class="logo">
+      <img src="./../../../assets/images/mon-com-ngon-vn-logo.png" alt="">
+    </div>
+    <div class="tab">
+      <ul class="menu">
+        <li><a [routerLink]="['']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Trang chủ</a></li>
+        <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Giới thiệu</a>
+        </li>
+        <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Thực Đơn</a>
+        </li>
+        <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Đặt Online</a>
+        </li>
+        <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Không gian
+            quán</a></li>
+        <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Vào Bếp</a>
+        </li>
+        <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Giỏ hàng</a>
+        </li>
+      </ul>
+    </div>
+    <div class="user">
+      <div *ngIf="isLogin; else noLogin">
+        <button class="user-button" mat-button [matMenuTriggerFor]="menu">Xin chào {{ username }}</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Thay đổi thông tin cá nhân</button>
+          <button mat-menu-item>Thay đổi mật khẩu</button>
+          <button mat-menu-item>Đăng xuất</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+
+</mat-card>
+<ng-template #noLogin>
+  <div>
+    <div class="tab-login">
+      <ul class="menu">
+        <!-- <li><a [routerLink]="['/auth','login']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Trang chủ</a></li> -->
+        <li>
+          <a [routerLink]="['auth', 'login']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Đăng nhập</a>
+        </li>
+        <li>
+          <a [routerLink]="['auth', 'register']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Đăng kí</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>

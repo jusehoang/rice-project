@@ -1,0 +1,33 @@
+.container {
+  background-color: #fff;
+  color: black;
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  .icon {
+    width: 10%;
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .success {
+    color: #51a351
+  }
+
+  .error {
+    color: #f44336
+  }
+
+  .info {
+    color: #9c27b0
+  }
+
+  .warning {
+    color: #f89406
+  }
+}
